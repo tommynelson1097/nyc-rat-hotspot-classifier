@@ -1,0 +1,192 @@
+Incident_Zip,Rat_Sighting_Count,Is_Hot_Spot,Hot_Spot_Category
+11221.0,3124,True,Hot Spot
+11216.0,2494,True,Hot Spot
+10025.0,2285,True,Hot Spot
+11238.0,2158,True,Hot Spot
+11233.0,1925,True,Hot Spot
+10467.0,1803,True,Hot Spot
+10456.0,1770,True,Hot Spot
+11207.0,1666,True,Hot Spot
+10457.0,1652,True,Hot Spot
+11385.0,1619,True,Hot Spot
+10458.0,1574,True,Hot Spot
+11206.0,1448,True,Hot Spot
+11213.0,1448,True,Hot Spot
+10031.0,1435,True,Hot Spot
+11217.0,1432,True,Hot Spot
+10027.0,1416,True,Hot Spot
+11237.0,1369,True,Hot Spot
+11211.0,1363,True,Hot Spot
+11226.0,1355,True,Hot Spot
+11215.0,1334,True,Hot Spot
+10002.0,1299,False,Normal
+10468.0,1290,False,Normal
+10024.0,1269,False,Normal
+10128.0,1244,False,Normal
+10453.0,1240,False,Normal
+10026.0,1218,False,Normal
+10452.0,1180,False,Normal
+10009.0,1179,False,Normal
+10029.0,1079,False,Normal
+10459.0,1063,False,Normal
+10032.0,1059,False,Normal
+11203.0,1058,False,Normal
+11212.0,1046,False,Normal
+10460.0,1000,False,Normal
+10462.0,994,False,Normal
+11208.0,978,False,Normal
+10033.0,977,False,Normal
+10472.0,972,False,Normal
+11225.0,971,False,Normal
+11205.0,938,False,Normal
+11222.0,937,False,Normal
+10451.0,826,False,Normal
+10455.0,809,False,Normal
+10463.0,804,False,Normal
+11377.0,786,False,Normal
+10023.0,778,False,Normal
+10035.0,775,False,Normal
+10034.0,747,False,Normal
+10314.0,747,False,Normal
+10030.0,739,False,Normal
+10469.0,715,False,Normal
+10306.0,691,False,Normal
+11201.0,682,False,Normal
+10013.0,661,False,Normal
+10003.0,627,False,Normal
+10040.0,624,False,Normal
+10028.0,622,False,Normal
+10014.0,616,False,Normal
+11236.0,586,False,Normal
+11235.0,585,False,Normal
+10466.0,577,False,Normal
+11433.0,564,False,Normal
+11101.0,560,False,Normal
+10011.0,559,False,Normal
+10312.0,555,False,Normal
+10012.0,550,False,Normal
+10036.0,533,False,Normal
+11373.0,529,False,Normal
+10454.0,527,False,Normal
+11214.0,521,False,Normal
+11368.0,506,False,Normal
+11412.0,491,False,Normal
+11231.0,490,False,Normal
+11435.0,485,False,Normal
+11434.0,462,False,Normal
+11234.0,459,False,Normal
+10019.0,451,False,Normal
+11103.0,448,False,Normal
+11432.0,446,False,Normal
+10304.0,441,False,Normal
+11230.0,436,False,Normal
+11218.0,424,False,Normal
+10305.0,424,False,Normal
+10016.0,420,False,Normal
+11372.0,416,False,Normal
+11378.0,415,False,Normal
+11223.0,409,False,Normal
+11219.0,402,False,Normal
+11210.0,397,False,Normal
+10001.0,383,False,Normal
+11220.0,380,False,Normal
+11379.0,377,False,Normal
+10303.0,377,False,Normal
+10301.0,363,False,Normal
+10461.0,356,False,Normal
+10022.0,354,False,Normal
+10465.0,349,False,Normal
+10473.0,348,False,Normal
+10021.0,347,False,Normal
+10010.0,346,False,Normal
+10474.0,342,False,Normal
+10310.0,336,False,Normal
+10038.0,331,False,Normal
+11249.0,319,False,Normal
+11420.0,313,False,Normal
+11417.0,306,False,Normal
+10039.0,304,False,Normal
+11419.0,292,False,Normal
+11204.0,290,False,Normal
+10302.0,290,False,Normal
+10308.0,279,False,Normal
+11229.0,277,False,Normal
+11374.0,275,False,Normal
+11106.0,275,False,Normal
+11224.0,268,False,Normal
+10309.0,267,False,Normal
+11413.0,264,False,Normal
+11418.0,258,False,Normal
+10007.0,249,False,Normal
+10065.0,248,False,Normal
+10037.0,246,False,Normal
+11357.0,243,False,Normal
+11209.0,239,False,Normal
+11355.0,238,False,Normal
+10075.0,237,False,Normal
+11436.0,231,False,Normal
+11375.0,227,False,Normal
+11691.0,214,False,Normal
+11416.0,203,False,Normal
+11429.0,193,False,Normal
+11421.0,192,False,Normal
+10470.0,188,False,Normal
+11104.0,186,False,Normal
+11105.0,186,False,Normal
+11423.0,180,False,Normal
+11232.0,176,False,Normal
+11228.0,176,False,Normal
+11361.0,176,False,Normal
+11414.0,170,False,Normal
+11370.0,169,False,Normal
+11354.0,164,False,Normal
+11102.0,159,False,Normal
+10471.0,156,False,Normal
+11369.0,154,False,Normal
+10018.0,140,False,Normal
+10307.0,126,False,Normal
+11367.0,118,False,Normal
+11358.0,113,False,Normal
+11422.0,107,False,Normal
+11411.0,104,False,Normal
+11426.0,97,False,Normal
+10006.0,91,False,Normal
+11365.0,85,False,Normal
+11356.0,80,False,Normal
+10475.0,79,False,Normal
+10017.0,77,False,Normal
+11692.0,76,False,Normal
+11694.0,72,False,Normal
+11428.0,66,False,Normal
+11693.0,65,False,Normal
+11364.0,60,False,Normal
+11427.0,60,False,Normal
+11415.0,58,False,Normal
+10464.0,52,False,Normal
+11001.0,46,False,Normal
+11366.0,41,False,Normal
+11362.0,41,False,Normal
+10004.0,40,False,Normal
+11360.0,37,False,Normal
+10069.0,29,False,Normal
+11004.0,24,False,Normal
+83.0,21,False,Normal
+10280.0,21,False,Normal
+11363.0,20,False,Normal
+10005.0,18,False,Normal
+10282.0,12,False,Normal
+11430.0,10,False,Normal
+10044.0,10,False,Normal
+10162.0,10,False,Normal
+11040.0,8,False,Normal
+11239.0,7,False,Normal
+10000.0,3,False,Normal
+10020.0,2,False,Normal
+10120.0,1,False,Normal
+10271.0,1,False,Normal
+10121.0,1,False,Normal
+10174.0,1,False,Normal
+11242.0,1,False,Normal
+1123.0,1,False,Normal
+11202.0,1,False,Normal
+100354.0,1,False,Normal
