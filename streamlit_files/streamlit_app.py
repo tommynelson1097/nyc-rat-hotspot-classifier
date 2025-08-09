@@ -17,16 +17,19 @@ st.set_page_config(
     layout="centered"
 )
 
-st.image("streamlit_files/rat_nyc.jpg", width=120)
+st.image("rat_nyc.jpg", width=120)
 st.markdown("""
 # NYC Rat Hot Spot Analysis
 Welcome to the interactive dashboard for exploring and analyzing rat sighting hot spots in New York City!
+
+**Hot Spot Definition:**
+Hot spots are defined as the top 10% of NYC ZIP codes by rat sighting frequency, based on 311 service request data. These are the areas with the highest reported rat activity.
 """)
 
 # Use st.cache for compatibility with older Streamlit versions
 @st.cache
 def load_data():
-    path = 'Rat_Sightings.csv'
+    path = '../Rat_Sightings.csv'
     df = pd.read_csv(path)
     return df
 
@@ -195,9 +198,9 @@ with tab3:
     # Load the best model and feature columns
     @st.cache(allow_output_mutation=True)
     def load_best_model_and_features_and_scaler():
-        model = joblib.load('streamlit_files/best_model.pkl')
-        features = joblib.load('streamlit_files/model_features.pkl')
-        scaler = joblib.load('streamlit_files/scaler.pkl')
+        model = joblib.load('best_model.pkl')
+        features = joblib.load('model_features.pkl')
+        scaler = joblib.load('scaler.pkl')
         return model, features, scaler
     best_model, model_features, scaler = load_best_model_and_features_and_scaler()
 
@@ -219,10 +222,16 @@ with tab3:
             response_time = st.number_input("Response Time (days)", min_value=0.0, value=7.0, format="%.2f")
         with col2:
             address_type = st.selectbox("Address Type", address_types)
-            month = st.number_input("Month", min_value=1, max_value=12, value=6)
+            month_names = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            month_name = st.selectbox("Month", month_names, index=5)
+            month = month_names.index(month_name) + 1
             year = st.number_input("Year", min_value=2000, max_value=2100, value=2024)
-            dayofweek = st.number_input("Day of Week (0=Mon)", min_value=0, max_value=6, value=0)
-            hour = st.number_input("Hour", min_value=0, max_value=23, value=12)
+            weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            weekday_name = st.selectbox("Day of Week", weekdays, index=0)
+            dayofweek = weekdays.index(weekday_name)
+            hour_labels = [f"{h:02d}:00" for h in range(24)]
+            hour_label = st.selectbox("Hour", hour_labels, index=12)
+            hour = hour_labels.index(hour_label)
         submitted = st.form_submit_button("Predict Hot Spot")
 
 
