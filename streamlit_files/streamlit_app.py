@@ -30,7 +30,8 @@ Hot spots are defined as the top 10% of NYC ZIP codes by rat sighting frequency,
 # Use st.cache for compatibility with older Streamlit versions
 @st.cache
 def load_data():
-    path = '../Rat_Sightings.csv'
+    # path = '../Rat_Sightings.csv'
+    path = 'Rat_Sightings.csv'
     df = pd.read_csv(path)
     return df
 
