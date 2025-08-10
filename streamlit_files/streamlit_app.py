@@ -17,7 +17,8 @@ st.set_page_config(
     layout="centered"
 )
 
-st.image("rat_nyc.jpg", width=120)
+# st.image("rat_nyc.jpg", width=120)
+st.image("streamlit_files/rat_nyc.jpg", width=120)
 st.markdown("""
 # NYC Rat Hot Spot Analysis
 Welcome to the interactive dashboard for exploring and analyzing rat sighting hot spots in New York City!
