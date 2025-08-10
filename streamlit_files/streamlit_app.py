@@ -200,9 +200,9 @@ with tab3:
     # Load the best model and feature columns
     @st.cache(allow_output_mutation=True)
     def load_best_model_and_features_and_scaler():
-        model = joblib.load('best_model.pkl')
-        features = joblib.load('model_features.pkl')
-        scaler = joblib.load('scaler.pkl')
+        model = joblib.load('streamlit_files/best_model.pkl')
+        features = joblib.load('streamlit_files/model_features.pkl')
+        scaler = joblib.load('streamlit_files/scaler.pkl')
         return model, features, scaler
     best_model, model_features, scaler = load_best_model_and_features_and_scaler()
 
