@@ -27,10 +27,9 @@ Welcome to the interactive dashboard for exploring and analyzing rat sighting ho
 Hot spots are defined as the top 10% of NYC ZIP codes by rat sighting frequency, based on 311 service request data. These are the areas with the highest reported rat activity.
 """)
 
-# Use st.cache for compatibility with older Streamlit versions
-@st.cache
+# Use st.cache_data for data loading
+@st.cache_data
 def load_data():
-    # path = '../Rat_Sightings.csv'
     path = 'Rat_Sightings.csv'
     df = pd.read_csv(path)
     return df
@@ -198,7 +197,7 @@ with tab3:
 
 
     # Load the best model and feature columns
-    @st.cache(allow_output_mutation=True)
+    @st.cache_resource
     def load_best_model_and_features_and_scaler():
         model = joblib.load('streamlit_files/best_model.pkl')
         features = joblib.load('streamlit_files/model_features.pkl')
