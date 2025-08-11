@@ -1,3 +1,6 @@
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://nyc-rat-hotspot-classifier-vqryxjsymsbqunmkvaseje.streamlit.app/)
+
 A machine learning project that predicts rat infestation hot spots across NYC ZIP codes using supervised classification and 311 service data.
 
 Project Overview
