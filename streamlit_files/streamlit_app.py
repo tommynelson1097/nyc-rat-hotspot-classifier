@@ -137,7 +137,7 @@ with tab1:
     location_counts = df_with_hotspots['Location Type'].value_counts().head(10)
     axes[0, 1].barh(location_counts.index, location_counts.values, color=colors[1])
     axes[0, 1].set_title('Top 10 Location Types', fontweight='bold')
-    axes[0, 1].set_xlabel('Number of Sightings')
+    axes[0, 1].set_xlabel('Number of Complaints')
 
     # 3. Seasonal Pattern
     season_counts = df_with_hotspots['Season'].value_counts()
