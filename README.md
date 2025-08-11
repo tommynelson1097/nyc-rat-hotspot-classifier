@@ -1,8 +1,6 @@
 # Main Streamlit Cloud App
 
-Access the live app here: [https://mood-based-movie-recommender-m729rjtzx7ggucxidsycfz.streamlit.app/
-](https://nyc-rat-hotspot-classifier-vqryxjsymsbqunmkvaseje.streamlit.app/)
-
+Access the live app here: https://nyc-rat-hotspot-classifier-vqryxjsymsbqunmkvaseje.streamlit.app/
 
 A machine learning project that predicts rat infestation hot spots across NYC ZIP codes using supervised classification and 311 service data.
 
