@@ -21,10 +21,10 @@ st.set_page_config(
 st.image("streamlit_files/rat_nyc.jpg", width=120)
 st.markdown("""
 # NYC Rat Hot Spot Analysis
-Welcome to the interactive dashboard for exploring and analyzing rat sighting hot spots in New York City!
+Welcome to the interactive dashboard for exploring and analyzing rat Complaint hot spots in New York City!
 
 **Hot Spot Definition:**
-Hot spots are defined as the top 10% of NYC ZIP codes by rat sighting frequency, based on 311 service request data. These are the areas with the highest reported rat activity.
+Hot spots are defined as the top 10% of NYC ZIP codes by rat complaint frequency, based on 311 service request data. These are the areas with the highest reported rat activity.
 """)
 
 # Use st.cache_data for data loading
@@ -110,7 +110,7 @@ else:
 
 
 
-tab1, tab2, tab3 = st.tabs(["📊 Rat Sighting Distribution Analysis", "🏙️ NYC Map", "🧮 Interactive Rat Sighting Hot-Spot Predictor"])
+tab1, tab2, tab3 = st.tabs(["📊 Rat Complaint Distribution Analysis", "🏙️ NYC Map", "🧮 Interactive Rat Complaint Hot-Spot Predictor"])
 
 
 # Tab 1: Distribution Analysis Page
@@ -120,7 +120,7 @@ with tab1:
     # Set plot style
     plt.style.use('default')
     fig, axes = plt.subplots(2, 3, figsize=(18, 12))
-    fig.suptitle('NYC Rat Sightings - Comprehensive Data Analysis', fontsize=16, fontweight='bold')
+    fig.suptitle('NYC Rat Complaints - Comprehensive Data Analysis', fontsize=16, fontweight='bold')
 
     # Color palette (NYC MTA subway line colors)
     colors = ['#0039A6', '#EE352E', '#00933C', '#FF6319', '#FCCC0A']
@@ -129,8 +129,8 @@ with tab1:
     # 1. Borough Distribution
     borough_counts = df_with_hotspots['Borough'].value_counts()
     axes[0, 0].bar(borough_counts.index, borough_counts.values, color=colors)
-    axes[0, 0].set_title('Rat Sightings by Borough', fontweight='bold')
-    axes[0, 0].set_ylabel('Number of Sightings')
+    axes[0, 0].set_title('Rat Complaints by Borough', fontweight='bold')
+    axes[0, 0].set_ylabel('Number of Complaints')
     axes[0, 0].tick_params(axis='x', rotation=45)
 
     # 2. Location Type Distribution (top 10)
@@ -147,8 +147,8 @@ with tab1:
     # 4. Address Type Distribution
     address_counts = df_with_hotspots['Address Type'].value_counts()
     axes[1, 0].bar(address_counts.index, address_counts.values, color=colors[2])
-    axes[1, 0].set_title('Sightings by Address Type', fontweight='bold')
-    axes[1, 0].set_ylabel('Number of Sightings')
+    axes[1, 0].set_title('Complaints by Address Type', fontweight='bold')
+    axes[1, 0].set_ylabel('Number of Complaints')
     axes[1, 0].tick_params(axis='x', rotation=45)
 
     # 5. Response Time Distribution
@@ -162,7 +162,7 @@ with tab1:
     hot_spot_borough.plot(kind='bar', ax=axes[1, 2], color=[colors[0], colors[4]], width=0.8)
     axes[1, 2].set_title('Hot Spots vs Normal by Borough', fontweight='bold')
     axes[1, 2].set_xlabel('Borough')
-    axes[1, 2].set_ylabel('Number of Sightings')
+    axes[1, 2].set_ylabel('Number of Complaints')
     axes[1, 2].legend(title='Category')
     axes[1, 2].tick_params(axis='x', rotation=45)
 
@@ -173,7 +173,7 @@ with tab1:
 # Tab 2: NYC Interactive Map Page
 with tab2:
     st.subheader("NYC Interactive Heatmap")
-    st.write("This heatmap shows the density of rat sightings across NYC. Brighter areas indicate more reports. For performance, a random sample of 5,000 sightings is shown.")
+    st.write("This heatmap shows the density of rat complaints across NYC. Brighter areas indicate more reports. For performance, a random sample of 5,000 complaints is shown.")
     # Filter for valid lat/lon
     df_map = df_with_hotspots.dropna(subset=["Latitude", "Longitude"])
     # Limit to 2000 points for performance
@@ -192,8 +192,8 @@ with tab2:
 
 # Tab 3: Interactive Rat Sighting Hot Spot Predictor
 with tab3:
-    st.subheader("Interactive Rat Sighting Hot Spot Predictor")
-    st.write("Enter the features below to predict if a sighting is in a hot spot zip code. This predictor uses the top-performing single hidden layer neural network model for classification.")
+    st.subheader("Interactive Rat Complaint Hot Spot Predictor")
+    st.write("Enter the features below to predict if a complaint is in a hot spot zip code. This predictor uses the top-performing single hidden layer neural network model for classification.")
 
 
     # Load the best model and feature columns
