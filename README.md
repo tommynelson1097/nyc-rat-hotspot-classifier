@@ -17,7 +17,7 @@ NYC Rat Sightings Hot Spot Classifier
 
 Overview
 --------
-This project uses machine learning to predict rat infestation hot spots across New York City ZIP codes, leveraging NYC 311 service request data. The model classifies ZIP codes as hot spots (top 10% by sighting frequency) to help city officials and pest control services prioritize interventions.
+This project uses machine learning to predict rat infestation hot spots across New York City ZIP codes, leveraging NYC 311 service request data. The model classifies ZIP codes as hot spots (top 10% by sighting frequency) to help city officials and pest control services prioritize interventions.The data consistst of complaints from 2010 to 2017. 
 
 Features
 --------
