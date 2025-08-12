@@ -194,7 +194,14 @@ with tab2:
     fig.update_layout(
         mapbox_style="carto-positron",
         margin={"r":0,"t":0,"l":0,"b":0},
-        legend_title_text="Hot Spot Category"
+        legend_title_text="Hot Spot Category",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=0.01,
+            xanchor="center",
+            x=0.5
+        )
     )
     st.plotly_chart(fig, use_container_width=True)
 
