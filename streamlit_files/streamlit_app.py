@@ -110,11 +110,10 @@ else:
 
 
 
-tab1, tab2, tab3 = st.tabs(["📊 Rat Complaint Distribution Analysis", "🏙️ NYC Map", "🧮 Interactive Rat Complaint Hot-Spot Predictor"])
+tab1, tab2, tab3 = st.tabs(["🧮 Interactive Rat Complaint Hot-Spot Predictor", "🏙️ NYC Map", "📊 Rat Complaint Distribution Analysis"])
 
-
-# Tab 1: Distribution Analysis Page
-with tab1:
+# Tab 3: Distribution Analysis Page
+with tab3:
     # Assuming df_with_hotspots is already loaded and preprocessed
 
     # Set plot style
@@ -170,28 +169,39 @@ with tab1:
     st.pyplot(fig)
 
 
-# Tab 2: NYC Interactive Map Page
+
+# Tab 2: NYC Interactive Map Page (Plotly Scatter Map)
 with tab2:
-    st.subheader("NYC Interactive Heatmap")
-    st.write("This heatmap shows the density of rat complaints across NYC. Brighter areas indicate more reports. For performance, a random sample of 5,000 complaints is shown.")
+    st.subheader("NYC Interactive Map (Efficient)")
+    st.write("This map shows a sample of rat complaints as points on a map using Plotly for faster rendering. Brighter clusters indicate more reports. For performance, a random sample of 5,000 complaints is shown.")
+    import plotly.express as px
     # Filter for valid lat/lon
     df_map = df_with_hotspots.dropna(subset=["Latitude", "Longitude"])
-    # Limit to 2000 points for performance
     max_points = 5000
     if len(df_map) > max_points:
         df_map = df_map.sample(n=max_points, random_state=42)
-    # Create a map using Folium
-    nyc_map = folium.Map(location=[40.7128, -74.0060], zoom_start=11)
-    # Prepare data for HeatMap
-    heat_data = df_map[["Latitude", "Longitude"]].values.tolist()
-    HeatMap(heat_data, radius=8, blur=12, min_opacity=0.2, max_zoom=1).add_to(nyc_map)
-    # Display the map
-    st_folium(nyc_map, width=700, height=500)
+    fig = px.scatter_mapbox(
+        df_map,
+        lat="Latitude",
+        lon="Longitude",
+        color="Hot_Spot_Category" if "Hot_Spot_Category" in df_map.columns else None,
+        hover_data=["Borough", "Location Type", "Created Date"],
+        zoom=10,
+        height=600,
+        opacity=0.5,
+        color_discrete_map={"Hot Spot": "#FF6319", "Normal": "#0039A6"}
+    )
+    fig.update_layout(
+        mapbox_style="carto-positron",
+        margin={"r":0,"t":0,"l":0,"b":0},
+        legend_title_text="Hot Spot Category"
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
 
 
-# Tab 3: Interactive Rat Sighting Hot Spot Predictor
-with tab3:
+# Tab 1: Interactive Rat Sighting Hot Spot Predictor
+with tab1:
     st.subheader("Interactive Rat Complaint Hot Spot Predictor")
     st.write("Enter the features below to predict if a complaint is in a hot spot zip code. This predictor uses the top-performing single hidden layer neural network model for classification.")
 
